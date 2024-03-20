@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:stylish/core/theming/app_style.dart';
 import 'package:stylish/features/authentication/screens/widgets/custom_material_button.dart';
 import 'package:stylish/features/authentication/screens/widgets/custom_rounded_container.dart';
@@ -24,7 +25,7 @@ class SignUpScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Create an \naccount',
+                'Create an \n account',
                 style: AppStyles.styleBold36(context),
               ),
               const SizedBox(
@@ -116,25 +117,28 @@ class SignUpScreen extends StatelessWidget {
                 height: 20,
               ),
               Center(
-                child: RichText(
-                  text: TextSpan(
-                    style: AppStyles.styleSemiBold18(context).copyWith(
-                      color: Colors.black,
+                child: GestureDetector(
+                  onTap: () =>  GoRouter.of(context).go('/loginScreen'),
+                  child: RichText(
+                    text: TextSpan(
+                      style: AppStyles.styleSemiBold18(context).copyWith(
+                        color: Colors.black,
+                      ),
+                      children: [
+                        TextSpan(
+                          text: 'Create An Account',
+                          style: AppStyles.styleReguler14(context).copyWith(
+                            color: const Color(0xFFA0A0A1),
+                          ),
+                        ),
+                        TextSpan(
+                          text: ' Login',
+                          style: AppStyles.styleSemiBold14(context).copyWith(
+                            color: Theme.of(context).primaryColor,
+                          ),
+                        ),
+                      ],
                     ),
-                    children: [
-                      TextSpan(
-                        text: 'Create An Account',
-                        style: AppStyles.styleReguler14(context).copyWith(
-                          color: const Color(0xFFA0A0A1),
-                        ),
-                      ),
-                      TextSpan(
-                        text: ' Login',
-                        style: AppStyles.styleSemiBold14(context).copyWith(
-                          color: Theme.of(context).primaryColor,
-                        ),
-                      ),
-                    ],
                   ),
                 ),
               ),

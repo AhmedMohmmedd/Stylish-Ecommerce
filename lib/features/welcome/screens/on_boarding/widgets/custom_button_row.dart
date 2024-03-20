@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:stylish/core/theming/app_style.dart';
+import 'package:stylish/core/utils/app_router.dart';
 import 'package:stylish/features/welcome/logic/onBoarding_cubit/on_boarding_cubit.dart';
 import 'package:stylish/features/welcome/screens/on_boarding/widgets/custom_dots_indecator.dart';
 
@@ -37,7 +39,7 @@ class CustomButtonRow extends StatelessWidget {
         onBoardingCubit.currentPageIndex == 2
             ? TextButton(
                 onPressed: () {
-                  () {};
+                  GoRouter.of(context).pushReplacement('/loginScreen');
                 },
                 child: Text(
                   'Get Started',

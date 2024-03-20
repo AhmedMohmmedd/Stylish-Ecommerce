@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:stylish/core/theming/app_style.dart';
 import 'package:stylish/features/welcome/screens/on_boarding/on_boarding.dart';
 
@@ -57,10 +58,11 @@ void navigatOnBoarding(context){
   Future.delayed(
    const Duration( seconds: 3),
     (){
-       Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) {
-          return const OnBoardingScreen();
-        },),);
+      //  Navigator.pushReplacement(context,
+      //       MaterialPageRoute(builder: (context) {
+      //     return const OnBoardingScreen();
+      //   },),);
+    GoRouter.of(context).pushReplacement('/OnBoardingScreen');
     }
   );
 }

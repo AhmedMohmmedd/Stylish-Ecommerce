@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:stylish/core/theming/app_style.dart';
 import 'package:stylish/features/authentication/screens/widgets/custom_material_button.dart';
 import 'package:stylish/features/authentication/screens/widgets/custom_rounded_container.dart';
@@ -48,9 +49,14 @@ class LoginScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
-                    'Forgot Password?',
-                    style: AppStyles.styleReguler12(context),
+                  TextButton(
+                    onPressed: () {
+                      GoRouter.of(context).push('/forgotpassword');
+                    },
+                    child: Text(
+                      'Forgot Password?',
+                      style: AppStyles.styleReguler12(context),
+                    ),
                   ),
                 ],
               ),
@@ -73,23 +79,23 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-               Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CustomRoundedContainer(
-                    child:  Image.asset('assets/images/Frame 4.png'),
+                    child: Image.asset('assets/images/Frame 4.png'),
                   ),
-                const  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   CustomRoundedContainer(
-                      child: SvgPicture.asset('assets/images/apple_icon.svg'),
+                    child: SvgPicture.asset('assets/images/apple_icon.svg'),
                   ),
-                 const SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   CustomRoundedContainer(
-                     child: SvgPicture.asset('assets/images/facebook_icon.svg'),
+                    child: SvgPicture.asset('assets/images/facebook_icon.svg'),
                   ),
                 ],
               ),
@@ -97,25 +103,28 @@ class LoginScreen extends StatelessWidget {
                 height: 20,
               ),
               Center(
-                child: RichText(
-                  text: TextSpan(
-                    style: AppStyles.styleSemiBold18(context).copyWith(
-                      color: Colors.black,
+                child: GestureDetector(
+                  onTap: () => GoRouter.of(context).push('/signUpScreen'),
+                  child: RichText(
+                    text: TextSpan(
+                      style: AppStyles.styleSemiBold18(context).copyWith(
+                        color: Colors.black,
+                      ),
+                      children: [
+                        TextSpan(
+                          text: 'Create An Account',
+                          style: AppStyles.styleReguler14(context).copyWith(
+                            color: const Color(0xFFA0A0A1),
+                          ),
+                        ),
+                        TextSpan(
+                          text: ' Sign Up',
+                          style: AppStyles.styleSemiBold14(context).copyWith(
+                            color: Theme.of(context).primaryColor,
+                          ),
+                        ),
+                      ],
                     ),
-                    children: [
-                      TextSpan(
-                        text: 'Create An Account',
-                        style: AppStyles.styleReguler14(context).copyWith(
-                          color: const Color(0xFFA0A0A1),
-                        ),
-                      ),
-                      TextSpan(
-                        text: ' Sign Up',
-                        style: AppStyles.styleSemiBold14(context).copyWith(
-                          color: Theme.of(context).primaryColor,
-                        ),
-                      ),
-                    ],
                   ),
                 ),
               ),

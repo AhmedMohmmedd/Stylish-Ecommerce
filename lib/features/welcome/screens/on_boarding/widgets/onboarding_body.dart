@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:stylish/core/theming/app_style.dart';
 import 'package:stylish/features/welcome/logic/onBoarding_cubit/on_boarding_cubit.dart';
 import 'package:stylish/features/welcome/screens/on_boarding/widgets/custom_button_row.dart';
@@ -46,10 +47,15 @@ class OnBoardingBody extends StatelessWidget {
                                 style: AppStyles.styleSemiBold18(context)
                                     .copyWith(color: const Color(0xFFA0A0A1))),
                           ])),
-                      Text(
-                        'Skip',
-                        style: AppStyles.styleSemiBold18(context).copyWith(
-                          color: Colors.black,
+                      InkWell(
+                        onTap: () {
+                          GoRouter.of(context).pushReplacement('/loginScreen');
+                        },
+                        child: Text(
+                          'Skip',
+                          style: AppStyles.styleSemiBold18(context).copyWith(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ],

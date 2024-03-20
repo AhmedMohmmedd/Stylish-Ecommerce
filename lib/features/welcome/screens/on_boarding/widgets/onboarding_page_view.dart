@@ -15,19 +15,22 @@ final Function(int)? onPageChanged;
       onPageChanged: onPageChanged,
       children: const [
         CustomOnBoardingContainer(
-          image: 'assets/images/onbording_image_1.png',
+          image: 'assets/images/fashion_shop_1.svg',
+          // image: 'assets/images/onbording_image_1.png',
           titel: 'Choose Products',
           subTitel:
               'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.',
         ),
         CustomOnBoardingContainer(
-          image: 'assets/images/onbording_image_2.png',
+          image: 'assets/images/fashion_shop_2.svg',
+          // image: 'assets/images/onbording_image_2.png',
           titel: 'Make Payment',
           subTitel:
               'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.',
         ),
         CustomOnBoardingContainer(
-          image: 'assets/images/onbording_image_3.png',
+          image: 'assets/images/fashion_shop_3.svg',
+          // image: 'assets/images/onbording_image_3.png',
           titel: 'Get Your Order',
           subTitel:
               'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.',

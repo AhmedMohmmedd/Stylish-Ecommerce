@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:stylish/core/theming/app_style.dart';
 
 class CustomOnBoardingContainer extends StatelessWidget {
@@ -14,7 +15,9 @@ final String subTitel;
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset(image),
+        // Image.asset(image),
+        
+        SvgPicture.asset(image),
         Text(
           titel,
           style: AppStyles.styleExtraBold24(context),
