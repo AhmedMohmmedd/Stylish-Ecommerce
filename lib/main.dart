@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stylish/core/theming/app_theme/app_theme_light.dart';
+import 'package:stylish/features/authentication/screens/forgot_password_screen.dart';
+import 'package:stylish/features/authentication/screens/login_screen.dart';
 import 'package:stylish/features/welcome/screens/welcome/welcome.dart';
 
 void main() {
@@ -16,7 +18,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
     theme: AppThemeLight.lightTheme,
-      home: const WelcomeScreen(),
+      home: const Forgotpassword(),
     );
   }
 }
+
+
+

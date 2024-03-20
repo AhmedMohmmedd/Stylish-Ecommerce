@@ -48,7 +48,9 @@ class OnBoardingBody extends StatelessWidget {
                           ])),
                       Text(
                         'Skip',
-                        style: AppStyles.styleSemiBold18(context),
+                        style: AppStyles.styleSemiBold18(context).copyWith(
+                          color: Colors.black,
+                        ),
                       ),
                     ],
                   ),
