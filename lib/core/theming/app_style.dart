@@ -133,7 +133,7 @@ abstract class AppStyles {
 
   static TextStyle styleSemiBold14(context) {
     return TextStyle(
-        color: Colors.white,
+        color: const Color(0xffA8A8A9),
         fontWeight: FontWeight.w600,
         fontSize: getResponsiveFontSize(context, fontSize: 14),
         fontFamily: 'Montserrat');
@@ -149,7 +149,7 @@ abstract class AppStyles {
 
   static TextStyle styleSemiBold18(context) {
     return TextStyle(
-        color: Colors.white,
+        color: Theme.of(context).primaryColor,
         fontWeight: FontWeight.w600,
         fontSize: getResponsiveFontSize(context, fontSize: 18),
         fontFamily: 'Montserrat');
@@ -190,7 +190,7 @@ abstract class AppStyles {
   /////////////////////////
   static TextStyle styleExtraBold24(context) {
     return TextStyle(
-        color: Colors.white,
+        color: Colors.black,
         fontWeight: FontWeight.w800,
         fontSize: getResponsiveFontSize(context, fontSize: 24),
         fontFamily: 'Montserrat');
@@ -215,7 +215,7 @@ abstract class AppStyles {
 
   static TextStyle styleBold18(context) {
     return TextStyle(
-        color: Colors.white,
+        color: Theme.of(context).primaryColor,
         fontWeight: FontWeight.w700,
         fontSize: getResponsiveFontSize(context, fontSize: 18),
         fontFamily: 'Montserrat');

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stylish/core/theming/app_theme/app_theme_light.dart';
 import 'package:stylish/features/welcome/screens/welcome/welcome.dart';
 
 void main() {
@@ -14,8 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-    
-      home:WelcomeScreen(),
+    theme: AppThemeLight.lightTheme,
+      home: const WelcomeScreen(),
     );
   }
 }
