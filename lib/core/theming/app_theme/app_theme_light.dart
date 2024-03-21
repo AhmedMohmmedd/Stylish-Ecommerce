@@ -8,5 +8,9 @@ abstract class AppThemeLight {
     useMaterial3: false,
     primaryColor: AppColorsLight.primary,
     scaffoldBackgroundColor: AppColorsLight.scaffoldBackgroundColor,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: AppColorsLight.appBarBackgroundColor,
+      elevation: 0,
+    )
   );
 }
