@@ -141,7 +141,7 @@ abstract class AppStyles {
 
   static TextStyle styleSemiBold16(context) {
     return TextStyle(
-        color: Colors.white,
+        color: Colors.black,
         fontWeight: FontWeight.w600,
         fontSize: getResponsiveFontSize(context, fontSize: 16),
         fontFamily: 'Montserrat');
@@ -230,7 +230,7 @@ abstract class AppStyles {
 
   static TextStyle styleBold20(context) {
     return TextStyle(
-        color: Colors.white,
+        color: Colors.black,
         fontWeight: FontWeight.w700,
         fontSize: getResponsiveFontSize(context, fontSize: 20),
         fontFamily: 'Montserrat');

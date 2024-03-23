@@ -3,6 +3,7 @@ import 'package:stylish/features/authentication/screens/forgot_password_screen.d
 import 'package:stylish/features/authentication/screens/login_screen.dart';
 import 'package:stylish/features/authentication/screens/sign_up_screen.dart';
 import 'package:stylish/features/home/screens/home_screen.dart';
+import 'package:stylish/features/profile/screens/profile_screen_.dart';
 import 'package:stylish/features/welcome/screens/on_boarding/on_boarding.dart';
 import 'package:stylish/features/welcome/screens/welcome/welcome.dart';
 
@@ -36,6 +37,10 @@ abstract class AppRouter {
     GoRoute(
       path: '/HomeScreen',
       builder: (context, state) => const HomeScreen(),
+    ),
+    GoRoute(
+      path: '/ProfileScreen',
+      builder: (context, state) => const ProfileScreen(),
     ),
   ]);
 }

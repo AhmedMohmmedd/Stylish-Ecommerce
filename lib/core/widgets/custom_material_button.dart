@@ -4,14 +4,15 @@ import 'package:stylish/core/theming/app_style.dart';
 
 class CustomMaterialButton extends StatelessWidget {
   const CustomMaterialButton({
-    super.key, this.onPressed, required this.text,
+    super.key, this.onPressed, required this.text, this.color,
   });
 final void Function()? onPressed;
 final String text;
+final Color? color;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      color: Theme.of(context).primaryColor,
+      color: color?? Theme.of(context).primaryColor,
       minWidth: double.infinity,
       height: 55,
       elevation: 0,

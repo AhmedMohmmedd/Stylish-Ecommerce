@@ -10,13 +10,17 @@ class CustomTextField extends StatefulWidget {
       this.prefixIcon,
       this.suffixIcon,
       this.onTapSuffixIcon,
-      required this.hintText,
+      this.hintText,
       this.validator,
       this.obscureText = false,
       this.keyboardType,
       this.readOnly = false,
-      this.onTap, this.color, this.borderColor, this.height});
-  final String hintText;
+      this.onTap,
+      this.color,
+      this.borderColor,
+      this.height,
+      this.helperText});
+  final String? hintText;
   final EdgeInsets? margin;
   final TextEditingController? controller;
   final Icon? prefixIcon;
@@ -30,6 +34,7 @@ class CustomTextField extends StatefulWidget {
   final Color? color;
   final Color? borderColor;
   final double? height;
+  final String? helperText;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -47,12 +52,12 @@ class _CustomTextFieldState extends State<CustomTextField> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: widget.height?? 60,
+      height: widget.height ?? 60,
       decoration: BoxDecoration(
           color: widget.color ?? const Color(0xffF3F3F3),
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
-            color: widget.borderColor?? const Color(0xffA8A8A9),
+            color: widget.borderColor ?? const Color(0xffA8A8A9),
             width: 1,
           )),
       child: Center(
@@ -64,9 +69,17 @@ class _CustomTextFieldState extends State<CustomTextField> {
           readOnly: widget.readOnly,
           onTap: widget.onTap,
           decoration: InputDecoration(
-            hintText: widget.hintText,
-            hintStyle: AppStyles.styleMedium14(context)
-                .copyWith(color: const Color(0xff757575)),
+            // helperText: widget.helperText ?? null,
+            // helperStyle: AppStyles.styleMedium16(context).copyWith(
+            //   color: Colors.black,
+            // ),
+            hintText: widget.hintText ?? widget.helperText,
+            hintStyle: widget.helperText != null
+                ? AppStyles.styleMedium16(context).copyWith(
+                    color: Colors.black,
+                  )
+                : AppStyles.styleMedium14(context)
+                    .copyWith(color: const Color(0xff757575)),
             prefixIcon: widget.prefixIcon,
             prefixIconColor: const Color(0xff626262),
             suffixIcon: widget.suffixIcon != null
