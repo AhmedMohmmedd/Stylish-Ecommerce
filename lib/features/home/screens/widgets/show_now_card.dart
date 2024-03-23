@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:stylish/core/theming/app_style.dart';
+import 'package:stylish/features/home/screens/widgets/custom_container_buttom.dart';
 
 class ShopNowCard extends StatelessWidget {
   const ShopNowCard({
@@ -56,29 +57,7 @@ class ShopNowCard extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              Container(
-                height: 40,
-                width: 100,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.white,
-                  ),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Shop Now',
-                      style: AppStyles.styleSemiBold12(context),
-                    ),
-                    const Icon(
-                      Icons.skip_next,
-                      color: Colors.white,
-                    ),
-                  ],
-                ),
-              ),
+             const CustomContainerButtom(text: 'Shop Now',),
             ],
           ),
         ),
