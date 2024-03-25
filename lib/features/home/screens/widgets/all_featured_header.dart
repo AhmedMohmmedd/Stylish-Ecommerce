@@ -4,16 +4,16 @@ import 'package:stylish/core/theming/app_style.dart';
 
 class AllFeaturedHeader extends StatelessWidget {
   const AllFeaturedHeader({
-    super.key,
+    super.key, required this.titel,
   });
-
+final String titel;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'All Featured',
+          titel,
           style: AppStyles.styleSemiBold18(context).copyWith(
             color: Colors.black,
           ),

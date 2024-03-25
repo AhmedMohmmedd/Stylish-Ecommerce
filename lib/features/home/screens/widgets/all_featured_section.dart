@@ -13,7 +13,7 @@ class AllFeaturedSection extends StatelessWidget {
       children: [
       const  Padding(
           padding:  EdgeInsets.symmetric(horizontal: 20),
-          child:  AllFeaturedHeader(),
+          child:  AllFeaturedHeader(titel: 'All Featured',),
         ),
        const SizedBox(height: 20,),
         Container(
