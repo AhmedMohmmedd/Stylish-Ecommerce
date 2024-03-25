@@ -4,14 +4,15 @@ import 'package:stylish/features/home/screens/widgets/custom_container_buttom.da
 import 'package:stylish/features/home/screens/widgets/show_now_card.dart';
 
 class CustomListTile extends StatelessWidget {
-  const CustomListTile({super.key, required this.title, required this.subtitle, required this.buttonText});
+  const CustomListTile({super.key, required this.title, required this.subtitle, required this.buttonText, this.backroundColor});
 final String title , subtitle , buttonText;
+final Color? backroundColor;
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: Colors.blue,
+        color: backroundColor?? Colors.blue,
       ),
       child: ListTile(
         title: Text(

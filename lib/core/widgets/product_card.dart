@@ -6,9 +6,10 @@ import 'package:stylish/features/home/data/models/product_model.dart';
 class ProductCard extends StatelessWidget {
   const ProductCard({
     super.key,
-    required this.productModel,
+    required this.productModel, this.height,
   });
   final ProductModel productModel;
+  final double? height;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -21,9 +22,14 @@ class ProductCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(
-              productModel.image,
-              fit: BoxFit.contain,
+            SizedBox(
+              height: height,
+              child: Center(
+                child: Image.asset(
+                  productModel.image,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
             const SizedBox(
               height: 5,
