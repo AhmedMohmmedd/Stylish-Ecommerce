@@ -67,7 +67,9 @@ class LoginScreen extends StatelessWidget {
               ),
               CustomMaterialButton(
                 text: 'Login',
-                onPressed: () {},
+                onPressed: () {
+                  GoRouter.of(context).pushReplacement('/HomeScreen');
+                },
               ),
               const SizedBox(
                 height: 46,

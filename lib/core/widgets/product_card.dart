@@ -22,13 +22,14 @@ class ProductCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
-              height: height,
-              child: Center(
-                child: Image.asset(
-                  productModel.image,
-                  fit: BoxFit.cover,
-                ),
+            Container(
+              height: height ,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Image.asset(
+                productModel.image,
+                fit: BoxFit.contain,
               ),
             ),
             const SizedBox(

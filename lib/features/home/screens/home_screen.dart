@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:stylish/core/widgets/custom_home_app_bar.dart';
 import 'package:stylish/features/home/screens/widgets/home_view_body.dart';
 import 'package:stylish/features/home/screens/widgets/trendingProduct.dart';
+import 'package:stylish/features/profile/screens/profile_screen_.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -17,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     HomeScreenBody(),
     TrendingProducts (),
     SizedBox(),
-    SizedBox(),
+    ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -68,17 +69,17 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.white,
-        child: const  Icon(
-          Icons.shopping_cart_checkout_outlined,
-          color: Colors.black,
-        ),
-        onPressed: () {
-          isSlected = true;
-        },
-      ),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // floatingActionButton: FloatingActionButton(
+      //   backgroundColor: Colors.white,
+      //   child: const  Icon(
+      //     Icons.shopping_cart_checkout_outlined,
+      //     color: Colors.black,
+      //   ),
+      //   onPressed: () {
+      //     isSlected = true;
+      //   },
+      // ),
     );
   }
 }

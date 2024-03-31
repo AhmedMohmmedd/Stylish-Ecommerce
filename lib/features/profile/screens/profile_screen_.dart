@@ -7,12 +7,13 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.white,
-      appBar: CustomMainAppBar(
-        titel: 'Checkout',
-      ),
-      body: ProfileScrennBody(),
-    );
+    // return const Scaffold(
+    //   backgroundColor: Colors.white,
+    //   appBar: CustomMainAppBar(
+    //     titel: 'Checkout',
+    //   ),
+    //   body: ProfileScrennBody(),
+    // );
+    return const ProfileScrennBody();
   }
 }

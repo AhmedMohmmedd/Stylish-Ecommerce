@@ -12,12 +12,8 @@ abstract class AppRouter {
   static final router = GoRouter(routes: [
     GoRoute(
       path: '/',
-      builder: (context, state) => const HomeScreen(),
+      builder: (context, state) => const WelcomeScreen(),
     ),
-    // GoRoute(
-    //   path: '/',
-    //   builder: (context, state) => const WelcomeScreen(),
-    // ),
     GoRoute(
       path: '/OnBoardingScreen',
       builder: (context, state) => const OnBoardingScreen(),
